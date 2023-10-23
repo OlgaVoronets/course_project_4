@@ -7,7 +7,7 @@ def get_HH_vacancies(keyword):
     hh = HeadHunterApi(keyword)
     data = hh.get_response()
     hh.add_to_json(data)
-    data = JSONSaver(hh.file_to_save).open_file()
+    data = JSONSaver().open_file(hh.file_to_save)
     for dict_ in data:
         Vacancy(dict_['name'], dict_['url'], dict_['area'], dict_.get('salary'), dict_['requirement'])
 
@@ -17,6 +17,6 @@ def get_SJ_vacancies(keyword):
     sj = SuperJobApi(keyword)
     data = sj.get_response()
     sj.add_to_json(data)
-    data = JSONSaver(sj.file_to_save).open_file()
+    data = JSONSaver().open_file(sj.file_to_save)
     for dict_ in data:
         Vacancy(dict_['name'], dict_['url'], dict_['area'], dict_.get('salary'), dict_['requirement'])

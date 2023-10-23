@@ -1,4 +1,5 @@
 class Vacancy:
+    """Класс для работы с вакансиями"""
     all = []
     collection_filename = 'received_vacancies.json'
 
@@ -21,7 +22,6 @@ class Vacancy:
 
     def __str__(self):
         result = f'{self.name}, {self.area}\nЗарплата '
-        # if self.salary:
         if self.salary_from != None and self.salary_from > 0:
             result += f'от {self.salary_from} '
         if self.salary_to != None and self.salary_to > 0:
@@ -48,5 +48,3 @@ class Vacancy:
         elif other.salary_from is None:
             other.salary_from = 0
         return self.salary_from < other.salary_from
-
-
