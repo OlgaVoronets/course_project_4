@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "course-project-4"
+version = "0.1.0"
+description = ""
+authors = ["olga voronets <voronets80@gmail.com>"]
+readme = "README.md"
+packages = [{include = "course_project_4"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
