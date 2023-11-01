@@ -18,7 +18,7 @@ class APIClient(ABC):
         pass
 
 
-class HeadHunterApi(ABC):
+class HeadHunterApi(APIClient):
     """Класс для получения вакансий с платформы HeadHunter"""
     file_to_save = 'HH_vacancies.json'
     url = "https://api.hh.ru/vacancies"
@@ -45,7 +45,7 @@ class HeadHunterApi(ABC):
 
 
 
-class SuperJobApi(ABC):
+class SuperJobApi(APIClient):
     """Класс для получения вакансий с платформы SuperJob"""
     API_KEY = os.getenv('SuperJobAppSecretKey')
     HEADERS = {'X-Api-App-Id': API_KEY}
