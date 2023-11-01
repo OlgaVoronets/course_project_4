@@ -2,7 +2,8 @@ from api_clients import HeadHunterApi, SuperJobApi
 from vacancy import Vacancy
 from saver_to_file import JSONSaver
 
-def get_HH_vacancies(keyword):
+
+def get_hh_vacancies(keyword):
     """Создает экземпляры класса Вакансий из файла HH и добавляет их в общий список класса"""
     hh = HeadHunterApi(keyword)
     data = hh.get_response()
@@ -12,7 +13,7 @@ def get_HH_vacancies(keyword):
         Vacancy(dict_['name'], dict_['url'], dict_['area'], dict_.get('salary'), dict_['requirement'])
 
 
-def get_SJ_vacancies(keyword):
+def get_sj_vacancies(keyword):
     """Создает экземпляры класса Вакансий из файла SJ и добавляет их в общий список класса"""
     sj = SuperJobApi(keyword)
     data = sj.get_response()

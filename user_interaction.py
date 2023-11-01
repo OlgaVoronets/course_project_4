@@ -9,12 +9,12 @@ import utils
 def create_user_request(answer, keyword):
     """Отправляем запрос и сохраняем полученные данные в файлы"""
     if answer == '1':
-        utils.get_HH_vacancies(keyword)
+        utils.get_hh_vacancies(keyword)
     elif answer == '2':
-        utils.get_SJ_vacancies(keyword)
+        utils.get_sj_vacancies(keyword)
     elif answer == '3':
-        utils.get_HH_vacancies(keyword)
-        utils.get_SJ_vacancies(keyword)
+        utils.get_hh_vacancies(keyword)
+        utils.get_sj_vacancies(keyword)
 
 
 print('Выберите платформу, с которой необходимо получить данные о вакансиях:\n'
